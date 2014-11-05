@@ -12,7 +12,7 @@ The website features a full-screen video playing in the background. The idea is 
 <http://www.sfu.ca/~hwlo/iat222_virtualgallery/>
 
 ### Tools Used:
-1. HTML5
-+ CSS3
-+ JavaScript
-+ JQuery
+* HTML5
+* CSS3
+* JavaScript
+* JQuery
