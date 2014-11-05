@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hi. My name is Henri Lo. A young university student attending SFU's School of Interactive Arts & Technology program. And I love to create my own stuffs.
 
-### More Information
+I favour minimalistic designs - I like designs that has little designs in them. I also favour things that are not in the common trend. I seek to try things, technology things with my own hands.
 
-A place to include any other types of information that you'd like to include about yourself. 
+### Infographics
+
+![My skills](http://henrilo.com/images/chart.png)
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[henrilo@outlook.com](mailto:henrilo@outlook.com)
