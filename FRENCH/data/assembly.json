@@ -1,0 +1,33 @@
+{"quizlist":[
+        {
+        "question":"What was National Assembly called previous?",
+        "option1":"Estates General",
+        "option2":"National Council",
+        "option3":"Estates Assembly"
+        },
+        {
+        "question":"Who were 'estates'?",
+        "option1":"Clergy, Nobility, Everyone",
+        "option2":"Upper, Middle, Lower",
+        "option3":"King, French, Slaves"
+        },
+        {
+        "question":"Who created the National Assembly which then joined by others later on?",
+        "option1":"Third Estate",
+        "option2":"First Estate",
+        "option3":"Second Estate"
+        },
+        {
+        "question":"In which event did members of different estates joined together as equals?",
+        "option1":"Tennis Court Oath",
+        "option2":"Let Them Have Cake",
+        "option3":"Execution of Louis XVI"
+        },
+        {
+        "question":"Which of the following represents 50% of the National Assembly?",
+        "option1":"Clergy & Nobility",
+        "option2":"Worker Class & Nobility",
+        "option3":"Clergy & Middle Class"
+        }
+    ]
+}
