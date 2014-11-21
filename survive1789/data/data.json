@@ -18,6 +18,12 @@
         "option3":"Sneak away quietly and pretend you heard nothing."
         },
         {
+        "question":"His majesty and his military officers have backed down in the face of a popular revolution. Necker is to be recalled as Minister of Finance, the Marquis de la Fayette to take command of the National Guard of Paris, and leader of the Third Estate Jean Sylvain Bailly to be mayor of Paris. His majesty will return himself to Paris and reconcile with the commons. Faced with the swift turn of events, you decide to:",
+        "option1":"Return to Paris with the King to reconcile the people.",
+        "option2":"Follow la Fayette and Bailly's footsteps and enter government as an official.",
+        "option3":"Protect your storage of wine."
+        },
+        {
         "question":"Although there have been some hiccups in the planning process, a large crowds of citizen militia stormed the gate of Bastille. Unfortunately, you happened to be near the scene at the time. What you decided to do?",
         "option1":"Charge with the citizen militia and support the cause.",
         "option2":"Stood up with the Royal troops to defend against the militia",
@@ -28,6 +34,13 @@
         "option1":"Rose up and support the cause in hope to halt the disturbances.",
         "option2":"Remained silent, but secretly begged for mercy after the meeting.",
         "option3":"Accuse the liberal nobles traitors to the noble class."
+        },
+        {
+        "question":"Women's march on Versailles!",
+        "option1":"Join the ladies to drag the King to live in the middle of Paris.",
+        "option2":"Attract the ladies to help the King runs away.",
+        "option3":"Take this opportunity to loot the King's palace."
         }
+        
     ]
 }
