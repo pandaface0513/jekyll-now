@@ -70,10 +70,10 @@
     
     //set links for images
     var imgs = [
-       'https://upload.wikimedia.org/wikipedia/commons/9/91/Estatesgeneral.jpg', 'http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Le_Serment_du_Jeu_de_paume.jpg/1024px-Le_Serment_du_Jeu_de_paume.jpg',
-        'http://upload.wikimedia.org/wikipedia/commons/d/d9/Charles_Marville%2C_Rue_St._Nicolas_du_Chardonnet%2C_de_la_rue_Traversine%2C_ca._1853%E2%80%9370.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/5/57/Anonymous_-_Prise_de_la_Bastille.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/9/91/Estatesgeneral.jpg'
+       '/resources/estatesgeneral.jpg', '/resources/nationalAssembly.jpg',
+        '/resources/alley.jpg',
+        '/resources/bastille.jpg',
+        '/resources/estatesgeneral.jpg'
     ]
         
     
@@ -261,31 +261,31 @@
             }else{      //if negative rep
                 x = 4;
                 document.body.style.backgroundImage = 
-        "url('http://extremelydreamily.files.wordpress.com/2013/06/dead_end1.jpg')"; 
+        "url('/resources/dead.jpg')"; 
             }
         }else{  //if still alive
             if(rep<0){  //if negative rep
                 x = 3;
                 document.body.style.backgroundImage = 
-        "url('http://upload.wikimedia.org/wikipedia/commons/7/7b/Yonash_Wanted_Poster.jpg')";
+        "url('/resources/wanted.jpg')";
             }else if(rep < 10){ //if little rep
                 x = 2;
                 document.body.style.backgroundImage = 
-        "url('http://upload.wikimedia.org/wikipedia/commons/6/65/Federation.jpg')";
+        "url('/resources/federation.jpg')";
             }else if(rep < 20){ //if more rep
                 x = 1;
                 document.body.style.backgroundImage = 
-        "url('http://upload.wikimedia.org/wikipedia/commons/6/65/Federation.jpg')";
+        "url('/resources/federation.jpg')";
             }else{  //if a lot of rep
                 x = 0;
                document.body.style.backgroundImage = 
-        "url('http://upload.wikimedia.org/wikipedia/commons/d/d3/Les_Tres_Riches_Heures_du_duc_de_Berry_avril_detail.jpg')"; 
+        "url('/resources/noble.jpg')"; 
             }
         }
         
         $(stage).append(
             '<h4>Your Reputation: '+rep+'</h4><p>'
-            + ending[x] + '</p><br><br><a href="start.php"><button>Play Again</button></a>'
+            + ending[x] + '</p><br><br><a href="game.html"><button>Play Again</button></a>'
         );
     }
 
