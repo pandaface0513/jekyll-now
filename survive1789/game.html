@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- META -->
+	<title>Surviving 1789</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="" />
+	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <link href='./css/app.css' rel='stylesheet' type='text/css'/>
+
+    
+	<!-- Javascript -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/kickstart.js"></script>
+</head>
+    
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">Surviving 1789</a></h1>    
+            <nav>
+                <ul>
+                    <li>
+                        <a href="game.html">Quick Start</a>
+                    </li>
+                    <li>
+                        <a href="about.html">FAQ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="game" class="grid">
+        <div class="col_12" style="margin-top:100px;">
+            <div id='navContent' class="center">
+                <div id='game1'></div>
+                <div id='game2'></div>
+                </div>
+        </div>
+    </div> <!-- End Grid -->
+
+
+<script>
+    //set variables
+    var qNum = 0,
+        qBank = new Array(),
+        level = 0,
+        stage = '#game1',
+        stage2 = new Object,
+        qLock = false,
+        alive = true,
+        num,
+        rep = 0;
+    
+    //set endings
+    var ending = [
+        "You have survived the French Revolution and proven of influential to the new republican government. You were offered a position in domestic policies, and a potential marriage with a high ranks officer's heir. A bright future of gold and fortune awaits! Congrats!",
+        "You have survived the French Revolution as a commoner. No one really noticed your talents as you tend to just go along with the flow. However what's more important than being alive, right?",
+        "You have survived the French Revolution as a nobody. No one has seen you take parts in any of the events. You are often ignored at the street. But hey! You are alive!",
+        "You have angered the citizen of France. They do not like the kinds of yours, as they search across the country and arrested all the unwanted. You ran in fear out of France.",
+        "You just died. A blade strike your heart and took away your life. Pity you, didn't even see the face of the assassin.",
+        "You meant well for Fatherland, but lady lucky wasn't on your side. At least you died with honor."
+    ]
+    
+    //set links for images
+    var imgs = [
+       'https://upload.wikimedia.org/wikipedia/commons/9/91/Estatesgeneral.jpg', 'http://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Le_Serment_du_Jeu_de_paume.jpg/1024px-Le_Serment_du_Jeu_de_paume.jpg',
+        'http://upload.wikimedia.org/wikipedia/commons/d/d9/Charles_Marville%2C_Rue_St._Nicolas_du_Chardonnet%2C_de_la_rue_Traversine%2C_ca._1853%E2%80%9370.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/5/57/Anonymous_-_Prise_de_la_Bastille.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/9/91/Estatesgeneral.jpg'
+    ]
+        
+    
+    //set background image
+    document.body.style.backgroundImage = 
+        "url("+imgs[qNum]+")";
+    
+    //set transparent black background for content
+    document.getElementById('navContent').style.background = 
+        "rgba(0, 0, 0, 0.5)";
+    
+    //loading the questions from json
+    $.getJSON('data/data.json', function(data){
+
+        //a for loop to load into the array
+        for(var i=0; i<data.quizlist.length; i++){
+            qBank[i] = new Array;
+                qBank[i][0] = data.quizlist[i].question;
+                qBank[i][1] = data.quizlist[i].option1;
+                qBank[i][2] = data.quizlist[i].option2;
+                qBank[i][3] = data.quizlist[i].option3;
+        }
+        
+        //now store the number of questions
+        num = qBank.length;
+        
+        //display it
+        displayIntroduction();
+        //displayQuestion();
+    });
+    
+    //function to display questions
+    function displayQuestion(){
+        //clear inroduction first
+        $(stage).empty();
+        
+        //randomize the answer orders
+        var rnd = Math.random()*3;
+        rnd = Math.ceil(rnd);
+        var q1,
+            q2,
+            q3;
+
+        switch(rnd){
+
+                case 1:
+                    q1 = qBank[qNum][1];
+                    q2 = qBank[qNum][2];
+                    q3 = qBank[qNum][3];
+                    break;
+
+                case 2:
+                    q1 = qBank[qNum][3];
+                    q2 = qBank[qNum][1];
+                    q3 = qBank[qNum][2];
+                    break;
+
+                case 3:
+                    q1 = qBank[qNum][2];
+                    q2 = qBank[qNum][3];
+                    q3 = qBank[qNum][1];
+                    break;
+        }
+
+        //add the questions now
+        $(stage).append(
+            '<h5 class="questionText">' + qBank[qNum][0] + '</h5>'
+            + '<button id="1" class="option">' + q1 + '</button>'
+            + '<button id="2" class="option">' + q2 + '</button>'
+            + '<button id="3" class="option">' + q3 + '</button>'
+        );
+        
+        $('.option').click(function(){
+            //lock the qlock so it cannot be reanswer
+           if(qLock==false){
+               qLock=true;
+               
+               //correct answer
+               if(this.id==rnd){
+                   $(stage).append(
+                     '<div class="feedback1">+ 5 Reputation</div>'  
+                   );
+                   rep += 5;
+               }
+               
+               //wrong answer
+               if(this.id!=rnd){
+                   $(stage).append(
+                       '<div class="feedback2">- 5 Reputation</div>'
+                   );
+                   rep -= 5;
+               }
+               
+               setTimeout(changeQuestion, 1000);
+           }
+        });
+    }   //end of display question
+    
+    //function to transit the questions
+    function changeQuestion(){
+        //increases the question number
+        qNum++;
+        
+        if(stage=='#game1'){
+            stage2 = '#game1';
+            stage = '#game2';
+        }else{
+            stage = '#game1';
+            stage2 = '#game2';
+        }
+        
+        //check for rep
+        //if rep is negative
+        if(rep < 0){
+           //roll a dice to check if gonna die
+           r = Math.random()*100;
+            console.log(r);
+           if(r > 50){
+               alive = false;
+               clearAndAnimate();
+               endQuiz();   //DIE
+               return;
+           }
+        }
+        
+        clearAndAnimate();
+        
+        //check if still more questions
+        if(qNum < num){
+            displayQuestion();
+        }else{
+            endQuiz();
+            return;
+        }
+        
+    //set background image
+    document.body.style.backgroundImage = 
+        "url("+imgs[qNum]+")";
+        
+    }   //end of change question
+    
+    //function to display background info
+    function displayIntroduction(){
+        $(stage).append(
+                '<h4>Background Info</h4><article><p>You are role-playing as a young noble of a well known Lord in Paris. You live in a time of struggles and changes. It is up to your decisions for me to thrive or suffer in such dramatic timeline. Good luck!</p></article>'
+        );
+        
+        $(stage).append('<button onclick="displayQuestion()">Continue</button>');
+    }
+    
+    //function to clear screen and animate
+    function clearAndAnimate(){
+        //clear the current screen
+        $(stage2).empty();
+
+        //animate
+        $(stage2).animate(
+            {'right': '+= 800px'},
+            'slow', function(){
+                $(stage2).css(
+                    'right',
+                    '-800px'
+                );
+            });
+
+        $(stage).animate(
+            {'right': '+=800px'},
+            'slow', function(){
+                qLock = false;
+            });
+    }
+    
+    //function for final result
+    function endQuiz(){
+        //clear screen and animate first
+        //clearAndAnimate();
+        
+        //a variable for ending
+        var x = 0;
+        
+        //decide endings
+        if(!alive){ //if dead
+            if(rep>0){  //if positive rep
+                x = 5;
+            }else{      //if negative rep
+                x = 4;
+                document.body.style.backgroundImage = 
+        "url('http://extremelydreamily.files.wordpress.com/2013/06/dead_end1.jpg')"; 
+            }
+        }else{  //if still alive
+            if(rep<0){  //if negative rep
+                x = 3;
+                document.body.style.backgroundImage = 
+        "url('http://upload.wikimedia.org/wikipedia/commons/7/7b/Yonash_Wanted_Poster.jpg')";
+            }else if(rep < 10){ //if little rep
+                x = 2;
+                document.body.style.backgroundImage = 
+        "url('http://upload.wikimedia.org/wikipedia/commons/6/65/Federation.jpg')";
+            }else if(rep < 20){ //if more rep
+                x = 1;
+                document.body.style.backgroundImage = 
+        "url('http://upload.wikimedia.org/wikipedia/commons/6/65/Federation.jpg')";
+            }else{  //if a lot of rep
+                x = 0;
+               document.body.style.backgroundImage = 
+        "url('http://upload.wikimedia.org/wikipedia/commons/d/d3/Les_Tres_Riches_Heures_du_duc_de_Berry_avril_detail.jpg')"; 
+            }
+        }
+        
+        $(stage).append(
+            '<h4>Your Reputation: '+rep+'</h4><p>'
+            + ending[x] + '</p><br><br><a href="start.php"><button>Play Again</button></a>'
+        );
+    }
+
+
+
+</script>
+
+</body>
+</html>

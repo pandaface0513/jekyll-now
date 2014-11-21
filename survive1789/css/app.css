@@ -2,6 +2,9 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #navContent {
@@ -9,14 +12,14 @@ html, body {
     width: 800px;
     height: 400px;
     position: relative;
-    overflow: hidden;
+    overflow: inherit;
     color: #FFF;
 }
 
 #game1 {
     margin: auto;
     width: 800px;
-    height: 800px;
+    height: auto;
     right: 0px;
     position: absolute;
 }
@@ -24,23 +27,22 @@ html, body {
 #game2 {
     margin: auto;
     width: 800px;
-    height: 400px;
+    height: auto;
     right: -800px;
     position: absolute;
 }
 
 .questionText {
-    font-weight: bold;
-    font-size: 18px;
-    color: #000;
+    font-weight: 100;
+    font-size: 14px;
 }
 
 
 .option {
     width: 400px;
-    height: 30px;
-    margin: 15px;
-    font-size: 18px;
+    height: auto;
+    margin: 10px;
+    font-size: 14px;
     padding: 2px;
     padding-left: 10px;
     cursor: pointer;
@@ -58,7 +60,7 @@ html, body {
 }
 
 .spacer {
-    height: 30px;
+    height: 1rem;
 }
 
 @media screen and (max-width:800px){
