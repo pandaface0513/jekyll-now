@@ -3,7 +3,7 @@
         "question":"You were send to the Estates-General by your Father, which was last convened in 1614. As you wonder how this venture shall play out. You decided to...",
         "option1":"Side with the Third Estate! To represent the commons, to enlighten this nation.",
         "option2":"Side with the Second Estate! With your father and fellow noble peers.",
-        "option3":"Side with no one; just there for the feast."
+        "option3":"Side with no one; just there for the cake."
         },
         {
         "question":"More than a month have passed with little done in the Estates-General. The commons have enough, and declared themselves the National Assembly; the Estates-General was to be no more. The National Assembly is determined to push forward regardless of the other Estates' participation or not. His majesty is highly concerned, and is seeking to impede and dissolved this new order. To this newly rising order, your father asks 'What is to be our course of action?'",
@@ -15,31 +15,31 @@
         "question":"You have learned that a mob of Parisians plans to march to Bastille on July 14. Their intentions seems to lie on the weapons stored in the stronghold. What would you do? ",
         "option1":"Rally your own band of citizen militia to help with the cause!",
         "option2":"Inform the commander of the Bastille and have the mob leaders executed.",
-        "option3":"Sneak away quietly and pretend you heard nothing."
-        },
-        {
-        "question":"His majesty and his military officers have backed down in the face of a popular revolution. Necker is to be recalled as Minister of Finance, the Marquis de la Fayette to take command of the National Guard of Paris, and leader of the Third Estate Jean Sylvain Bailly to be mayor of Paris. His majesty will return himself to Paris and reconcile with the commons. Faced with the swift turn of events, you decide to:",
-        "option1":"Return to Paris with the King to reconcile the people.",
-        "option2":"Follow la Fayette and Bailly's footsteps and enter government as an official.",
-        "option3":"Protect your storage of wine."
+        "option3":"Sneak away quietly and enjoy your cake."
         },
         {
         "question":"Although there have been some hiccups in the planning process, a large crowds of citizen militia stormed the gate of Bastille. Unfortunately, you happened to be near the scene at the time. What you decided to do?",
         "option1":"Charge with the citizen militia and support the cause.",
         "option2":"Stood up with the Royal troops to defend against the militia",
-        "option3":"Run away to stay in the comfort of your home."
+        "option3":"Run away to stay in the comfort of your home and bake cakes."
+        },
+            {
+        "question":"His majesty and his military officers have backed down in the face of a popular revolution. Necker is to be recalled as Minister of Finance, the Marquis de la Fayette to take command of the National Guard of Paris, and leader of the Third Estate Jean Sylvain Bailly to be mayor of Paris. His majesty will return himself to Paris and reconcile with the commons. Faced with the swift turn of events, you decide to:",
+        "option1":"Return to Paris with the King to reconcile the people.",
+        "option2":"Follow la Fayette and Bailly's footsteps and enter government as an official.",
+        "option3":"Protect your storage of cakes."
         },
         {
         "question":"On the night of August 4, 1789, in an attempt to prevent further disorder in the country. Some liberal nobles and clerics rose in the Assembly and gave up their exclusive rights. By supporting this cause, it could mean that all French citizens will be equal, regardless of status. You are one of the representative in the Assembly, what you decide to do? ",
         "option1":"Rose up and support the cause in hope to halt the disturbances.",
-        "option2":"Remained silent, but secretly begged for mercy after the meeting.",
+        "option2":"Remained silent, but secretly bribe them with cakes!",
         "option3":"Accuse the liberal nobles traitors to the noble class."
         },
         {
         "question":"Women's march on Versailles!",
         "option1":"Join the ladies to drag the King to live in the middle of Paris.",
         "option2":"Attract the ladies to help the King runs away.",
-        "option3":"Take this opportunity to loot the King's palace."
+        "option3":"Take this opportunity to loot the King's palace, may they have cakes."
         }
         
     ]
