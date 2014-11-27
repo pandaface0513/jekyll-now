@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">    
+<head>
+	<meta charset="utf-8">
+	<title>IAT 455 Final Project: Songifier Music Melody Creator</title>
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/night.css" id="theme"> 
+	<!--Add support for earlier versions of Internet Explorer -->
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- Wrap the entire slide show in a div using the "reveal" class. -->
+	<div class="reveal">
+		<!-- Wrap all slides in a single "slides" class -->
+		<div class="slides">
+
+			<!-- ALL SLIDES GO HERE -->
+			<!-- Each section element contains an individual slide -->
+			<section>
+			<!-- The content of your slide goes here -->
+				<h2>"Songifier MK2014"</h2>
+				<p>IAT 455 Final Project Presentation</p>
+				<q> - Henry Lo &amp; Kevin Choy - </q>
+			</section>
+			
+			<section>
+				<h2>Approach</h2>
+				<ul>
+					<li>Generative audio composition</li>
+					<li>Let anyone compose a song by speaking a microphone</li>
+					<li>Not everyone has the money or skill to be a musician</li>
+					<li>Users can speak, sing, or make any other vocal effects. Our application will create a unique melody composition.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2><em>*** Demo of our project ***</em></h2>
+			</section>
+			
+			<section>
+				<section>
+					<h2 style="margin-bottom: 1em">Technical Details</h2>
+
+					<h3>Step 1: Getting the Data</h3>
+						<ul>
+							<li>We have one type of input, which is from the user's microphone
+								<pre>
+									<code data-trim>
+										navigator.<strong>getUserMedia</strong>({audio:true});
+									</code>
+								</pre>
+							</li>
+							<li>When the "record" button is pressed, record from mic for a set interval
+								<ul>
+									<li>One thread pushes the music's frequency data values to an array cumulatively</li>
+									<li>Another thread does time management</li>
+								</ul>
+							</li>
+						</ul>
+				</section>
+
+				<section>
+				<h3>Step 2: Manipulating the Data</h3>
+					<p>Once recording is complete, do post-processing.</p>
+					<ul>
+						<li><strong>Group the data:</strong> when multiple consecutive frequency values are encountered, group them together and add a length: <br />
+								<code style="font-size: 12pt">
+								{note: 5,  freq: 34 }, {note: 6,  freq: 36 }, ... {note: 63, freq: 987}, {note: 64, freq: 1046}
+							</code>
+						</li>
+						<li>This is done by comparing each frequency its key number, based on this piano note chart from Wikipedia:</li>
+
+					</ul>
+					<img src="images/Piano_key_frequencies.png" alt="Piano key frequencies">
+				</section>
+
+				<section>
+				<h3>Step 2: Manipulating the Data (continued)</h3>
+					<ul>
+						<li>Regroup the notes again in case we have any new consecutive notes</li>
+						<li>Create a music sheet
+							<ul>
+								<li>Based on Workshop 7 code, with modifications made so that it will accept the note data format we created
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Step 3: Output Synthesized Audio</h3>
+					<ul>
+						<li>Play back the synthesized audio composition</li>
+						<li>Also based on the Workshop 7 code</li>
+						<li>Our ideal outputs would be both a graphic visualizer and a melody created from the input. However, based on our time contraints, we likely won't be able to achieve both.</li>
+					</ul>
+				</section>
+
+				<section>
+				<h3>Technical Analysis</h3>
+					<h4>Novel code</h4>
+					<ul>
+						<li>Generating a melody in JavaScript based on microphone input is a new idea</li>
+						<li>Grouping of notes</li>
+						<li>Mapping algorithm</li>
+					</ul>
+
+					<h4>Performance &amp; Optimization</h4>
+					<ul>
+						<li>No performance issues so far</li>
+						<li>Threads are managed properly</li>
+						<li>Too much linear searching</li>
+					</ul>
+
+					<h4>Technical Issues &amp; Challenges</h4>
+					<ul>
+						<li>We are only able to get a short snippet of the total recorded audio, or it is bunched up together</li>
+						<li>Unable to analyze the exact audio data being outputted</li>
+					</ul>
+
+				</section>
+
+			</section>
+
+			<section>
+				<h2>Summary</h2>
+				<h3>Benefits</h3>
+				<ul>
+					<li>Creates music based on microphone data</li>
+					<li>Audio smoothing effect based on consecutive notes</li>
+					<li>No melody will sound exactly the same, but recording a similar input as before should also yield a result that sounds similar as before</li>
+					<li>Fast performance</li>
+				</ul>
+
+				<h3>Caveats</h3>
+				<ul>
+
+					<li>Time-consuming and very complex to implement
+						<ul>
+							<li>No user-adjustable settings at the moment</li>
+							<li>Effects have yet to be implemented</li>
+						</ul>
+
+					</li>
+					<li>Output sounds incorrect</li>
+					<li>Cannot store the melody, or allow the user to download</li>
+				</ul>
+			</section>
+
+			<!--
+			<section>
+			<h2>Logical Steps</h2>
+				<ol>
+					<li>access to microphone</li>
+					<li>receive the fft data and analyze it</li>
+					<li>map the pitch to a particular piano/guitar note</li>
+					<li>store the melody and then play it</li>
+					<li>generate graphics according to the melody</li>
+				</ol>
+			</section>
+			
+			<section>
+			<h2>Steps by steps interaction</h2>
+				<ol>
+					<li>user starts the application by pressing a button</li>
+					<li>the app will analyze the input in real time</li>
+					<li>the resulted instrument notes be stored in an array</li>
+					<li>give user a limit of 30 seconds</li>
+					<li>after the recording, the app will play the stored melody</li>
+					<li>and generate the graphics in real time</li>
+				</ol>
+			</section>
+
+
+			-->
+			
+			<section>
+			<h1>THE END</h1>
+				<q> - Henry Lo &amp; Kevin Choy - </q>
+			</section>
+
+
+
+		</div>
+	</div>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+		// Required, even if empty.
+		Reveal.initialize({
+			transition: 'linear'
+		});
+	</script>
+</body>
+</html>
