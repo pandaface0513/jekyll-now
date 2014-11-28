@@ -1,26 +1,26 @@
 {"quizlist":[
         {
-        "question":"You were send to the Estates-General by your Father, which was last convened in 1614. As you wonder how this venture shall play out. You decided to...",
+        "question":"You were sent to the Estates-General by your Father, which was last convened in 1614. As you wonder how this venture shall play out. You decide to...",
         "option1":"Side with the Third Estate! To represent the commons, to enlighten this nation.",
         "option2":"Side with the Second Estate! With your father and fellow noble peers.",
         "option3":"Side with no one; just there for the cake."
         },
         {
-        "question":"More than a month have passed with little done in the Estates-General. The commons have enough, and declared themselves the National Assembly; the Estates-General was to be no more. The National Assembly is determined to push forward regardless of the other Estates' participation or not. His majesty is highly concerned, and is seeking to impede and dissolved this new order. To this newly rising order, your father asks 'What is to be our course of action?'",
+        "question":"More than a month has passed with little done in the Estates-General. The commons have had enough, and are declaring themselves the National Assembly; the Estates-General is to be no more. The National Assembly is determined to push forward regardless of the other Estates' participation or not. His majesty is seeking to impede and dissolve this new order. Your father asks 'What is to be our course of action?'",
         "option1":"Partake in the National Assembly, swear an oath to solidarity with fellow companions to the Tennis Court.",
         "option2":"Condemn the radical new order, support the King's attempt to restores sensibility.",
         "option3":"Sit back and eat cake."
         },
         {
-        "question":"You have learned that a mob of Parisians plans to march to Bastille on July 14. Their intentions seems to lie on the weapons stored in the stronghold. What would you do? ",
+        "question":"You learn that a mob of Parisians plan to march to Bastille on July 14. Their intentions seem to lie on the weapons stored in the stronghold. What will you do? ",
         "option1":"Rally your own band of citizen militia to help with the cause!",
         "option2":"Inform the commander of the Bastille and have the mob leaders executed.",
         "option3":"Sneak away quietly and enjoy your cake."
         },
         {
-        "question":"Although there have been some hiccups in the planning process, a large crowds of citizen militia stormed the gate of Bastille. Unfortunately, you happened to be near the scene at the time. What you decided to do?",
+        "question":"Although there have been some hiccups in the planning process, a large crowd of citizen militia is now storming the gate of Bastille. Unfortunately, you happened to be near the scene at the time. What do intend to do?",
         "option1":"Charge with the citizen militia and support the cause.",
-        "option2":"Stood up with the Royal troops to defend against the militia",
+        "option2":"Stand up with the Royal troops to defend against the militia",
         "option3":"Run away to stay in the comfort of your home and bake cakes."
         },
             {
@@ -31,14 +31,14 @@
         },
         {
         "question":"On the night of August 4, 1789, in an attempt to prevent further disorder in the country. Some liberal nobles and clerics rose in the Assembly and gave up their exclusive rights. By supporting this cause, it could mean that all French citizens will be equal, regardless of status. You are one of the representative in the Assembly, what you decide to do? ",
-        "option1":"Rose up and support the cause in hope to halt the disturbances.",
-        "option2":"Remained silent, but secretly bribe them with cakes!",
+        "option1":"Rise up and support the cause in hope to halt the disturbances.",
+        "option2":"Remain silent, but secretly bribe them with cakes!",
         "option3":"Accuse the liberal nobles traitors to the noble class."
         },
         {
         "question":"Women's march on Versailles!",
         "option1":"Join the ladies to drag the King to live in the middle of Paris.",
-        "option2":"Attract the ladies to help the King runs away.",
+        "option2":"Attract the ladies to help the King run away.",
         "option3":"Take this opportunity to loot the King's palace, may they have cakes."
         }
         
