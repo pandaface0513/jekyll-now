@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/custom-darkTheme.css"/>
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body onload="startClock()">
+    <!-- Navigation Bar (full width) -->
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+         
+        <li class="name">
+          <h1>
+            <a href="#">
+              Home Sweet Homepage
+            </a>
+          </h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="left">
+
+          <li class="has-dropdown not-click">
+            <a href="https://reddit.com/">Reddit</a>
+            <ul class="dropdown">
+              <li><a href="https://reddit.com/r/android">Android</a></li>
+              <li><a href="https://reddit.com/r/gunpla">Gunpla</a></li>
+              <li><a href="https://reddit.com/r/kappa">Kappa</a></li>
+              <li><a href="https://reddit.com/r/monsterhunter">Monster Hunter</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown not-click">
+            <a href="https://4chan.org/">4chan</a>
+            <ul class="dropdown">
+              <li><a href="https://4chan.org/a/">Anime</a></li>
+              <li><a href="https://4chan.org/fa/">Fashion</a></li>
+              <li><a href="https://4chan.org/fit/">Fitness</a></li>
+              <li><a href="https://4chan.org/g/">Technology</a></li>
+              <li><a href="https://4chan.org/mu/">Music</a></li>
+              <li><a href="https://4chan.org/o/">Automotive</a></li>
+              <li><a href="https://4chan.org/v/">Video Games</a></li>
+              <li><a href="https://4chan.org/vg/">Vidya Generals</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <ul class="right">
+          <li class="search">
+            <form id="search" action="https://startpage.com/do/search/" method="get">
+              <input type="search" name="q" placeholder="Search " />
+            </form>
+          </li>
+          <li class="has-button">
+            <a id="search-submit" class="small button">
+            <div id="search-icon">&#9906;
+            </div>
+            </a>
+          </li>
+        </ul>
+      </section> <!-- end of .top-bar-section -->
+    </nav> <!-- end of .top-bar -->
+
+    <!-- Old Container for the <nav>. Place back in here to restrict it.
+    <div class="row">
+      <div class="large-12 columns"> 
+
+        
+      </div>
+    </div>  -->
+       
+    <!-- Main Panel -->
+    <div id="header-row" class="row">
+      <div id="header-columns" class="large-12 columns">
+
+        <div class="hide-for-small">
+          <div id="featured">
+                <!-- <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">        -->
+                <h2 id="welcome_text"></h2>
+                <h1 id="time"></h1>
+                <p id="date"></p>
+          </div> <!-- end of #featured -->
+        </div> <!-- end of .hide-for-small -->
+
+        <div class="row">
+          <div class="small-12 show-for-small"><br>
+            <!-- <img src="http://placehold.it/1000x600&text=For Small Screens"/> -->
+          </div> <!-- end of .small-12 .show-for-small -->
+        </div> <!-- end of .row -->
+  
+      </div> <!-- end of large-12 .columns -->
+    </div><br> <!-- end of .row -->
+    
+    <!-- 4 thumbnails -->
+    <div id="fourThumbnails" class="row">
+      <div class="large-12 columns">
+
+        <div class="row">
+          <a href="https://gmail.com">
+          <div class="large-3 small-6 columns">
+            <!-- <img src="http://placehold.it/250x250&text=Thumbnail"/> -->
+            <img src="img/gmail.png">
+            <h6 class="panel">Gmail</h6>
+          </div> <!-- end of .large-3 .small-6 .columns -->
+          </a>
+   
+          <a href="https://facebook.com">
+          <div class="large-3 small-6 columns">
+            <!-- <img src="http://placehold.it/250x250&text=Thumbnail"/> -->
+            <img src="img/facebook.png"/>
+            <h6 class="panel">Facebook</h6>
+          </div> <!-- end of .large-3 .small-6 .columns -->
+          </a>
+          
+          <a href="https://messenger.com">
+          <div class="large-3 small-6 columns">
+            <!-- <img src="http://placehold.it/250x250&text=Thumbnail"/> -->
+            <img src="img/messaging.png"/>
+            <h6 class="panel">Messenger</h6>
+          </div> <!-- end of .large-3 .small-6 .columns -->
+          </a>
+   
+          <a href="https://twitter.com">
+          <div class="large-3 small-6 columns">
+            <!-- <img src="http://placehold.it/250x250&text=Thumbnail"/> -->
+            <img src="img/twitter.png"/>
+            <h6 class="panel">Twitter</h6>
+          </div> <!-- end of .large-3 .small-6 .columns -->
+          </a>
+        </div> <!-- end of .row -->
+
+      </div> <!-- end of .large12 .columns -->
+    </div> <!-- end of .row -->
+
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr>
+        <div class="row">
+          <div class="large-6 columns">
+            <p>Feel free to dissect and practice here! That's what the page is for.</p>
+          </div>
+          <div class="large-6 columns">
+            <ul class="inline-list right">
+              <li><a href="http://forum.xda-developers.com/xperia-z2">Xperia Z2 on XDA</a></li>
+              <li><a href="https://wiki.installgentoo.com/index.php/Main_Page">InstallGentoo Wiki</a></li>
+              <li><a href="https://kiranico.com/en/mh4u">MH4U Database</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+        <!-- Scripts -->
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/guts.js"></script>
+        <script src="js/personalize.js"></script>
+  </body>
+</html>

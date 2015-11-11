@@ -1,0 +1,22 @@
+/* custom-styling below */
+#search-icon{
+	-webkit-transform: rotate(315deg);
+	-moz-transform: rotate(315deg); 
+	-o-transform: rotate(315deg);
+}
+
+.row#header-row{
+	margin-top: 3rem;
+}
+
+#header-columns{
+	text-align: center;
+}
+
+h1#time{
+	font-weight: bold;
+}
+
+.row#fourThumbnails{
+	margin-top: 0.75rem;
+}
